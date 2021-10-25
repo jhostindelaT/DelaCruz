@@ -1,5 +1,3 @@
 <?php include 'Cabeza/header.php'?>
-
-<?php include 'Elementoshtml/jhostin.html'?>
-
+<?php include 'Portafolio/Portafolio.html'?>
 <?php include 'PiePagina/pie.php' ?>
