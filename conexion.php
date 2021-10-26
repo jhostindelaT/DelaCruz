@@ -1,7 +1,22 @@
 <?php
 
-$con = mysqli_connect('localhost','jhosinsi','Jhostin2004@');
-mysqli_select_db('Usuario', $con)
+
+    $user="jhostinsi";
+    $pass="Jhostin2004@";
+    $server="localhost";
+    $db="Usuarios";
+    $con= new mysqli($server,$user,$pass,$db);
+
+    if($con-> connect_errno){
+
+        die('la conexxion ha fallado'. $con-> connect_errno);
+
+    }
+    else{
+        echo'funciono';
+    }
+
+
+
 
 ?>
-
