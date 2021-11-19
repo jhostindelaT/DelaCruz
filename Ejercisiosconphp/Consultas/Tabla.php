@@ -27,7 +27,8 @@ $resultado = $con->query($sql);
         <td>Nombre</td>
         <td>Apellido</td>
         <td>Edad</td>
-        <td>Calve</td>
+        <td>Clave</td>
+        <td>Eliminar</td>
     </tr>
     <?php 
         while($datos=$resultado->fetch_array()){
@@ -37,6 +38,7 @@ $resultado = $con->query($sql);
                 <td><?php echo $datos["Apellido"]?></td>
                 <td><?php echo $datos["Edad"]?></td>
                 <td><?php echo $datos["Contrasena"]?></td>
+                <td><a href="Eliminar.php?id=<?php echo $datos["ID_Usuario"]?>">Eliminar</a></td>
             </tr>
             <?php   
         }
