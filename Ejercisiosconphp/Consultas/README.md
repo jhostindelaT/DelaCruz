@@ -1,0 +1,1 @@
+## la consultas se realizan como cualquier otra con ddl y dml.
