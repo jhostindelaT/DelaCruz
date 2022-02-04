@@ -12,7 +12,17 @@ if($con->connect_errno)
 $sql = "select * from Usuarios";
 
 $resultado = $con->query($sql);
+
+
+if (!empty($_REQUEST['si'])) {
+  $o=$_REQUEST['si'];
+    $si['so']=$o;
+   
+    $hola=$si['so'];
+   
+}
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -21,6 +31,7 @@ $resultado = $con->query($sql);
 </head>
 <body>
     <h1 align="center">LISTADO DE MEDICOS</h1>
+    <form action="" method="">
     <table width="70%" border="1px" align="center">
 
     <tr align="center">
@@ -38,12 +49,34 @@ $resultado = $con->query($sql);
                 <td><?php echo $datos["Apellido"]?></td>
                 <td><?php echo $datos["Edad"]?></td>
                 <td><?php echo $datos["Contrasena"]?></td>
-                <td><a href="Eliminar.php?id=<?php echo $datos["ID_Usuario"]?>">Eliminar</a></td>
+                <td><a href="?si=<?php echo $datos["Nombre"]?>">Agregar</a></td>
             </tr>
             <?php   
         }
 
      ?>
+    </table>
+    </form>
+<table>
+    <tr align="center">
+        <td>Nombre</td>
+        <td>Apellido</td>
+    </tr>
+
+    <?php 
+       
+        ?>
+            <tr>
+                <td><?php echo $hola?></td>
+                <td><?php echo $hola?></td>
+
+            </tr>
+            <?php   
+        
+
+     ?>
+         
+    
     </table>
 
 </body>
